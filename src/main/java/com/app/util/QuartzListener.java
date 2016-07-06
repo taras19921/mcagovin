@@ -34,7 +34,7 @@ public class QuartzListener implements ServletContextListener {
             // Create a Trigger that fires every day.
             Trigger trigger = newTrigger()
                     .withIdentity("TriggerName", "Group")
-                    .withSchedule(CronScheduleBuilder.cronSchedule("0 47 11 * * ?"))
+                    .withSchedule(CronScheduleBuilder.cronSchedule("0 38 14 * * ?"))
                     .build();
 
             // Setup the Job and Trigger with Scheduler & schedule jobs

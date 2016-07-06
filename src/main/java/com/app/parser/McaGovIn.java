@@ -25,6 +25,13 @@ import java.util.List;
 
 public class McaGovIn {
 
+    public static void main(String[] args)
+    {
+
+        List<String> allCIN = getAllCIN("https://www.zaubacorp.com/company-list/p-1-company.html");
+        getCompanies(allCIN);
+    }
+
     public static List<String> getAllCIN(String link) {
 
         System.out.println("Success!!!");
@@ -123,7 +130,7 @@ public class McaGovIn {
                     pages.add(link);
                 } else break;
             while (true) {
-                if (pages.size() % 600 == 0) {
+                if (pages.size() % 10 == 0) {
                     System.out.println("pages.size(): " + pages.size());
                     System.out.println("last_page: " + pages.get(pages.size() - 1));
                     return allCIN;
